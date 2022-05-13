@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <h1 style="text-align:center">Find the Area of the Circle</h1>
+    <h2 style="text-align:center">Type the Radius Into the Box to Find the Area!</h2>
+    <p style="text-align:center">(3.14 is used as pi)</p>
+    <label>Radius</label>
+    <input id="crRadius">
+    <br>
+    <button id="AreaButton">Find Area</button>
+    <br>
+    <p>The Area Is...<span id=crArea></span></p>
+    <br>
+    <a href ="index.html"><button>Go Back</button></a>
+   <script>
+     const crRadiusBox = document.querySelector("input#crRadius")
+     const crAreaButton = document.querySelector("button#AreaButton")
+     const crArea = document.querySelector("span#crArea")
+
+     crAreaButton.onclick = () => {
+       let radius = crRadiusBox.value
+       let area = radius*radius*3.14
+       crArea.innerHTML = area
+     }
+     
+   </script>
+  </body>
+</html>
