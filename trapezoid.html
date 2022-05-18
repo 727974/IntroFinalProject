@@ -8,30 +8,36 @@
 
   </head>
   <body>
-    <h1 style="text-align:center">Find the Area of the Square</h1>
-    <h2 style="text-align:center">Type the Length and Width Into the Boxes to Find the Area!</h2>
-    <label>Length:</label>
-    <input id="sqLength">
+    <h1 style="text-align:center">Find the Area of the Trapezoid</h1>
+    <h2 style="text-align:center">Type the Bases and Height Into the Boxes to Find the Area!</h2>
+    <label>Base 1:</label>
+    <input id="bs1">
     <br>
-    <label>Width:</label>
-    <input id="sqWidth">
+    <label>Base 2:</label>
+    <input id="bs2">
     <br>
-    <button id="sqAreaButton">Find Area</button>
+    <label>Height</label>
+    <input id="hght">
     <br>
-    <p>The Area Is...<span id=sqArea></span></p>
+    <button id="trAreaButton">Find Area</button>
+    <br>
+    <p>The Area Is...<span id=trArea></span></p>
     <br>
     <a href ="index.html"><button>Go Back</button></a>
    <script>
-     const sqLengthBox = document.querySelector("input#sqLength")
-     const sqWidthBox = document.querySelector("input#sqWidth")
-     const sqAreaButton = document.querySelector("button#sqAreaButton")
-     const sqArea = document.querySelector("span#sqArea")
+     const baseOneBox = document.querySelector("input#bs1")
+     const baseTwoBox = document.querySelector("input#bs2")
+     const heightBox = document.querySelector("input#hght")
+     const trAreaButton = document.querySelector("button#trAreaButton")
+     const trArea = document.querySelector("span#trArea")
+     
 
-     sqAreaButton.onclick = () => {
-       let length = sqLengthBox.value
-       let width = sqWidthBox.value
-       let area = length*width
-       sqArea.innerHTML = area
+     trAreaButton.onclick = () => {
+       let bs1 = baseOneBox.value
+       let bs2 = baseTwoBox.value
+       let hght = heightBox.value
+       let area = (1/2)*(bs1+bs2)*hght
+       trArea.innerHTML = area
      }
      
    </script>
