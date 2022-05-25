@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <h1 style="text-align:center">Find the Area of the Trapezoid</h1>
+    <h2 style="text-align:center">Type the Bases and Height Into the Boxes to Find the Area!</h2>
+    <label>Base 1:</label>
+    <input id="bs1">
+    <br>
+    <label>Base 2:</label>
+    <input id="bs2">
+    <br>
+    <label>Height</label>
+    <input id="hght">
+    <br>
+    <button id="trAreaButton">Find Area</button>
+    <br>
+    <p>The Area Is...<span id=trArea></span></p>
+    <br>
+    <a href ="index.html"><button>Go Back</button></a>
+   <script>
+     const baseOneBox = document.querySelector("input#bs1")
+     const baseTwoBox = document.querySelector("input#bs2")
+     const heightBox = document.querySelector("input#hght")
+     const trAreaButton = document.querySelector("button#trAreaButton")
+     const trArea = document.querySelector("span#trArea")
+     
+
+     trAreaButton.onclick = () => {
+       let bs1 = parseInt(baseOneBox.value)
+       let bs2 = parseInt(baseTwoBox.value)
+       let hght = heightBox.value
+       let bases = bs1+bs2
+       let area = bases*0.5*hght
+       trArea.innerHTML = area
+     }
+     
+   </script>
+  </body>
+</html>

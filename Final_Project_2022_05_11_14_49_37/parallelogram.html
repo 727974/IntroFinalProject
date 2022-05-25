@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <h1 style="text-align:center">Find the Area of the Parallelogram</h1>
+    <h2 style="text-align:center">Type the Base and Height Into the Boxes to Find the Area!</h2>
+    <label>Base:</label>
+    <input id="sqLength">
+    <br>
+    <label>Height</label>
+    <input id="sqWidth">
+    <br>
+    <button id="sqAreaButton">Find Area</button>
+    <br>
+    <p>The Area Is...<span id=sqArea></span></p>
+    <br>
+    <a href ="index.html"><button>Go Back</button></a>
+   <script>
+     const sqLengthBox = document.querySelector("input#sqLength")
+     const sqWidthBox = document.querySelector("input#sqWidth")
+     const sqAreaButton = document.querySelector("button#sqAreaButton")
+     const sqArea = document.querySelector("span#sqArea")
+
+     sqAreaButton.onclick = () => {
+       let length = sqLengthBox.value
+       let width = sqWidthBox.value
+       let area = (length*width)
+       sqArea.innerHTML = area
+     }
+     
+   </script>
+  </body>
+</html>
